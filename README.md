@@ -6,6 +6,7 @@
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
 Information inside <> should be replaced with your data. For example, if you are naming your node 'mynode', <moniker> should be replaced with 'mynode'.
 
+
 **1. Update the local package list and install any available upgrades**
 
 ```console
@@ -43,13 +44,15 @@ export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export DAEMON_NAME=sovereignchaind
 export DAEMON_HOME=$HOME/.sovereignchain
+export MONIKER_NAME=<moniker>
+export WALLET_NAME=<moniker-wallet>
 ```
 
 ````console
 source ~/.profile
 ```console
 
-**7. Log out and back in**
+**7. Log out and back in if neccessary**
 **8. Check Go installation**
 ```console
 go version
@@ -95,7 +98,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 **13. Initialize the application**
 
 ```console
-./sovereignchaind init <moniker> --chain-id sovereignchain
+./sovereignchaind init $MONIKER --chain-id sovereignchain
 ```
 
 **14a. Copy config files**
