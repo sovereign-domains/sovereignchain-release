@@ -6,27 +6,29 @@
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
 Information inside <> should be replaced with your data. For example, if you are naming your node 'mynode', <moniker> should be replaced with 'mynode'.  
 
-**Update the local package list and install any available upgrades**  
+**1. Update the local package list and install any available upgrades**  
 ```console
 sudo apt-get update && sudo apt upgrade -y
 ```
 
-**Install toolchain and ensure accurate time synchronization**  
+**2. Install toolchain and ensure accurate time synchronization**  
 ```console
 sudo apt-get install make build-essential gcc git jq chrony -y
 ```
 
-**Add validator as system user**  
+**3. Add validator as system user**  
 ```console
 sudo adduser <moniker>  
 sudo usermod -aG sudo <moniker>
 ```
 
-**Log out and back in as the new user**
+**4. Log out and back in as the new user**
 
-**Install Go**
-$ wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
-$ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
+**5. Install Go**
+```console
+wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
+```
 
 **Update profile**
 $ export GOROOT=/usr/local/go
