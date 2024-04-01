@@ -41,7 +41,7 @@ wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
-**6a. Update profile**
+**6. Update profile**
 ```console
 pico ~/.profile
 ```
@@ -58,12 +58,11 @@ export MONIKER_NAME=<moniker>
 export WALLET_NAME=<moniker>
 ```
 
-**6b. Apply the changes**
+**7. Apply the changes**
 ```console
 source ~/.profile
 ```
 
-**7. Log out and back in if neccessary**
 **8. Check Go installation**
 ```console
 go version
