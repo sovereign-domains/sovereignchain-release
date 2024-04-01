@@ -108,6 +108,8 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 
 ```console
 ./sovereignchaind init $MONIKER --chain-id sovereignchain
+```
+```console
 sovereignchaind keys add $WALLET_NAME
 ```
 Store keyring passphrase and mnemonic somewhere safe.
