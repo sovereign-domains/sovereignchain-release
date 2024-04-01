@@ -112,6 +112,7 @@ curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/c
 
 ```console
 cd ~/.sovereignchain/config/
+ls
 ```
 
 should result in:
@@ -119,6 +120,8 @@ should result in:
 ```console
 app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
 ```
+
+Use a file editor like pico or nano to edit app.toml and config.toml
 
 **15. Back up**
 
