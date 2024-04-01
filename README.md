@@ -115,11 +115,11 @@ Store keyring passphrase and mnemonic somewhere safe.
 **14a. Copy config files and validate**
 
 ```console
-curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
-chmod a-wx ~/.sovereignchain/config/genesis.json
-curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config.toml -o ~/.sovereignchain/config/config.toml
-curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/app.toml -o ~/.sovereignchain/config/app.toml
-sovereignchaind validate-genesis
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json &&
+chmod a-wx ~/.sovereignchain/config/genesis.json &&
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config.toml -o ~/.sovereignchain/config/config.toml &&
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/app.toml -o ~/.sovereignchain/config/app.toml &&
+./sovereignchaind validate-genesis
 ```
 
 **14b. Update config files manually**
