@@ -101,10 +101,11 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 **14a. Copy config files**
 
 ```console
-curl https://raw.githubusercontent.com/sovereign-domains/sovereignchain-release/blob/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
 chmod a-wx ~/.sovereignchain/config/genesis.json
-curl https://raw.githubusercontent.com/sovereign-domains/sovereignchain-release/blob/main/config/config.toml -o ~/.sovereignchain/config/config.toml
-curl https://raw.githubusercontent.com/sovereign-domains/sovereignchain-release/blob/main/config/app.toml -o ~/.sovereignchain/config/app.toml
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config/config.toml -o ~/.sovereignchain/config/config.toml
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config/app.toml -o ~/.sovereignchain/config/app.toml
+
 ```
 
 **14b. Update config files manually**
