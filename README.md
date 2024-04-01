@@ -119,7 +119,7 @@ curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/c
 chmod a-wx ~/.sovereignchain/config/genesis.json &&
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config.toml -o ~/.sovereignchain/config/config.toml &&
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/app.toml -o ~/.sovereignchain/config/app.toml &&
-./sovereignchaind validate-genesis
+./sovereignchaind genesis validate-genesis
 ```
 
 **14b. Update config files manually**
