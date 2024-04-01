@@ -98,7 +98,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ./sovereignchaind init $MONIKER --chain-id sovereignchain
 sovereignchaind keys add $WALLET_NAME
 ```
-Make a note of the wallet details
+Store keyring passphrase and mnemonic somewhere safe.
 
 **14a. Copy config files**
 
