@@ -54,8 +54,6 @@ export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export DAEMON_NAME=sovereignchaind
 export DAEMON_HOME=$HOME/.sovereignchain
-export MONIKER_NAME=<moniker>
-export WALLET_NAME=<moniker>
 ```
 
 **7. Apply the changes**
@@ -107,7 +105,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 **13. Initialize the application and create app key**
 
 ```console
-./sovereignchaind init $MONIKER --chain-id sovereignchain
+./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
 ```console
 sovereignchaind keys add $WALLET_NAME
