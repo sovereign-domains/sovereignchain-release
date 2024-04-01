@@ -103,8 +103,8 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ```console
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
 chmod a-wx ~/.sovereignchain/config/genesis.json
-curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config/config.toml -o ~/.sovereignchain/config/config.toml
-curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config/app.toml -o ~/.sovereignchain/config/app.toml
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config.toml -o ~/.sovereignchain/config/config.toml
+curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/app.toml -o ~/.sovereignchain/config/app.toml
 
 ```
 
