@@ -57,15 +57,12 @@ source ~/.profile
 ```console
 go version
 ````
-
 should return something like this:
-
 ```console
 go version go1.22.0 linux/amd64
 ```
 
 **9. Set up firewall**
-
 ```console
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
@@ -95,11 +92,13 @@ wget https://github.com/sovereign-domains/sovereignchain-release/raw/main/releas
 tar xzf sovereignchain_linux_amd64.tar.gz
 ```
 
-**13. Initialize the application**
+**13. Initialize the application and create app key**
 
 ```console
 ./sovereignchaind init $MONIKER --chain-id sovereignchain
+sovereignchaind keys add $WALLET_NAME
 ```
+Make a note of the wallet details
 
 **14a. Copy config files**
 
