@@ -95,10 +95,12 @@ sudo ufw allow 1317/tcp
 sudo ufw enable
 ```
 
-**12. Download and unzip binary**
+**12. Download and unzip Sovereign chain binary**
 
 ```console
 wget https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
+```
+```console
 tar xzf sovereignchain_linux_amd64.tar.gz
 ```
 
