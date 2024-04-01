@@ -26,6 +26,9 @@ sudo usermod -aG sudo <moniker>
 ```
 
 **4. Log out and back in as the new user**
+```console
+exit
+```
 
 **5. Install Go**
 
