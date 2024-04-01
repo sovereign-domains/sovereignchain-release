@@ -132,22 +132,22 @@ WantedBy=multi-user.target
 ```
 
 ```console
-sudo -S systemctl daemon-reload
-sudo -S systemctl enable sovereignchaind
-sudo systemctl start sovereignchaind
+sudo -S systemctl daemon-reload &&
+sudo -S systemctl enable sovereignchaind &&
+sudo systemctl start sovereignchaind &&
 sudo systemctl status sovereignchaind
 ```
 should return:
 ```console
      sovereignchaind.service - Sovereign Daemon (cosmovisor)
      Loaded: loaded (/etc/systemd/system/sovereignchaind.service; enabled; vendor preset: enabled)
-     Active: active (running) since Mon 2024-04-01 08:25:12 UTC; 4ms ago
-   Main PID: 9007 (cosmovisor)
-      Tasks: 1 (limit: 4642)
-     Memory: 384.0K
-        CPU: 1ms
+     Active: active (running) since Mon 2024-04-01 08:51:22 UTC; 23ms ago
+   Main PID: 12667 (cosmovisor)
+      Tasks: 6 (limit: 4642)
+     Memory: 5.7M
+        CPU: 19ms
      CGroup: /system.slice/sovereignchaind.service
-             └─9007 /home/genesis/go/bin/cosmovisor run start
+             └─12667 /home/genesis/go/bin/cosmovisor run start
 
 ~$ systemd[1]: Started Sovereign Daemon (cosmovisor).
 ```
