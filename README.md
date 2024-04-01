@@ -8,15 +8,19 @@ Information inside <> should be replaced with your data. For example, if you are
 
 **Update the local package list and install any available upgrades**  
 ```console
-~$ sudo apt-get update && sudo apt upgrade -y
+sudo apt-get update && sudo apt upgrade -y
 ```
 
 **Install toolchain and ensure accurate time synchronization**  
-$ sudo apt-get install make build-essential gcc git jq chrony -y  
+```console
+sudo apt-get install make build-essential gcc git jq chrony -y
+```
 
 **Add validator as system user**  
-$ sudo adduser <moniker>  
-$ sudo usermod -aG sudo <moniker>  
+```console
+sudo adduser <moniker>  
+sudo usermod -aG sudo <moniker>
+```
 
 **Log out and back in as the new user**
 
