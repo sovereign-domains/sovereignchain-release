@@ -170,7 +170,7 @@ should return:
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-**18. Set up Cosmovisor service (remember to replace <moniker> throughout**
+**18. Set up Cosmovisor service (remember to replace moniker throughout)**
 
 ```console
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades
