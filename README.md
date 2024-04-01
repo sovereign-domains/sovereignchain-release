@@ -85,8 +85,15 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ```console
 ./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
-**14. The default config files have been created in ~/.sovereignchain/config/**  
+**14. Update config files**  
+```console```
+cd ~/.sovereignchain/config/
+ls
+```
+should result in:
+```console
 app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
+```
 
 **15. Back up**  
 node_key.json and priv_validator_key.json
@@ -106,7 +113,7 @@ should return:
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-**16. Set up Cosmovisor service (remember to replace <moniker> throughout**
+**18. Set up Cosmovisor service (remember to replace <moniker> throughout**
 ```console
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 sudo nano /etc/systemd/system/sovereignchaind.service
@@ -151,7 +158,7 @@ should return:
 
 ~$ systemd[1]: Started Sovereign Daemon (cosmovisor).
 ```
-**17. Monitor logs CTRL +C to exit**
+**19. Monitor logs CTRL +C to exit**
 ```console
 journalctl -fu sovereignchaind
 ```
