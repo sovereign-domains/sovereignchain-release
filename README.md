@@ -42,6 +42,10 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.ta
 ```
 
 **6a. Update profile**
+```console
+pico ~/.profile
+```
+
 
 ```console
 export GOROOT=/usr/local/go
