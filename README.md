@@ -167,13 +167,13 @@ should return:
 **17. Copy sovereignchain binary to Cosmovisor folder**
 
 ```console
+mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades &&
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
 **18. Set up Cosmovisor service (remember to replace moniker throughout)**
 
 ```console
-mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades &&
 sudo nano /etc/systemd/system/sovereignchaind.service
 ```
 
