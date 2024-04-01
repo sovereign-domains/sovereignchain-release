@@ -84,8 +84,8 @@ sudo ufw allow 26660/tcp
 **10. If the node would like to expose CometBFTs jsonRPC and Cosmos SDK GRPC and REST**
 
 ```console
-sudo ufw allow 26657/tcp
-sudo ufw allow 9090/tcp
+sudo ufw allow 26657/tcp &&
+sudo ufw allow 9090/tcp &&
 sudo ufw allow 1317/tcp
 ```
 
