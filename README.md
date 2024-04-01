@@ -96,7 +96,9 @@ app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_
 ```
 
 **15. Back up**  
+```console
 node_key.json and priv_validator_key.json
+```
 
 **16. Install Cosmovisor**
 ```console
