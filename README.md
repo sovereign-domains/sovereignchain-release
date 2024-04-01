@@ -108,7 +108,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
 ```console
-sovereignchaind keys add <moniker>
+./sovereignchaind keys add <moniker>
 ```
 Store keyring passphrase and mnemonic somewhere safe.
 
