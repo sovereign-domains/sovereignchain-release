@@ -6,7 +6,7 @@
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
 Throughout, replace `<moniker>` with the name of your node.
 
-**1. Update the local package list and install any available upgrades**
+### 1. Update the local package list and install any available upgrades
 
 ```console
 sudo apt-get update && sudo apt upgrade -y
