@@ -30,35 +30,56 @@ wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
-**Update profile**
-$ export GOROOT=/usr/local/go
-$ export GOPATH=$HOME/go
-$ export GO111MODULE=on
-$ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-$ export DAEMON_NAME=sovereignchaind
-$ export DAEMON_HOME=$HOME/.sovereignchain
+**6. Update profile**
+```console
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export DAEMON_NAME=sovereignchaind
+export DAEMON_HOME=$HOME/.sovereignchain
+```
 
-$ source ~/.profile 
+```console
+source ~/.profile
+```console
 
-**Log out and back in**
-**Check Go installation**
-$ go version
-should return something like this: go version go1.22.0 linux/amd64
+**7. Log out and back in**
+**8. Check Go installation**
+```console
+go version
+```
+should return something like this:
+```console
+go version go1.22.0 linux/amd64
+```
 
-**Set up firewall**
-$ sudo ufw default deny incoming
-$ sudo ufw default allow outgoing
-$ sudo ufw allow ssh
-$ sudo ufw allow 26656/tcp
-$ sudo ufw allow 26660/tcp
+**9. Set up firewall**
+```console
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
+sudo ufw allow 26656/tcp
+sudo ufw allow 26660/tcp
+```
 
-**If the node would like to expose CometBFTs jsonRPC and Cosmos SDK GRPC and REST**
-$ sudo ufw allow 26657/tcp
-$ sudo ufw allow 9090/tcp
-$ sudo ufw allow 1317/tcp
+**10. If the node would like to expose CometBFTs jsonRPC and Cosmos SDK GRPC and REST**
+```console
+sudo ufw allow 26657/tcp
+sudo ufw allow 9090/tcp
+sudo ufw allow 1317/tcp
+```
 
-$ sudo ufw enable
+**11. Enable firewall**
+```console
+sudo ufw enable
+```
 
-**Download binary**
-$ curl -O https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
+**12. Download and unzip binary**
+```console
+curl -O https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
+tar xzf sovereignchain_linux_amd64.tar.gz
+```
+
+
 
