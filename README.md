@@ -12,13 +12,13 @@ Throughout, replace `<moniker>` with the name of your node.
 sudo apt-get update && sudo apt upgrade -y
 ```
 
-**2. Install toolchain and ensure accurate time synchronization**
+### 2. Install toolchain and ensure accurate time synchronization
 
 ```console
 sudo apt-get install make build-essential gcc git jq chrony -y
 ```
 
-**3. Add validator as system user**
+### 3. Add validator as system user
 
 ```console
 sudo adduser <moniker>
@@ -27,12 +27,12 @@ sudo adduser <moniker>
 sudo usermod -aG sudo <moniker>
 ```
 
-**4. Log out and back in as the new user**
+### 4. Log out and back in as the new user
 ```console
 exit
 ```
 
-**5. Install Go**
+### 5. Install Go
 
 ```console
 wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
@@ -41,7 +41,7 @@ wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
-**6. Update profile**
+### 6. Update profile
 ```console
 pico ~/.profile
 ```
@@ -56,12 +56,12 @@ export DAEMON_NAME=sovereignchaind
 export DAEMON_HOME=$HOME/.sovereignchain
 ```
 
-**7. Apply the changes**
+### 7. Apply the changes
 ```console
 source ~/.profile
 ```
 
-**8. Check Go installation**
+### 8. Check Go installation
 ```console
 go version
 ````
@@ -70,7 +70,7 @@ should return something like this:
 go version go1.22.0 linux/amd64
 ```
 
-**9. Set up firewall**
+### 9. Set up firewall
 ```console
 sudo ufw default deny incoming &&
 sudo ufw default allow outgoing &&
@@ -79,7 +79,7 @@ sudo ufw allow 26656/tcp &&
 sudo ufw allow 26660/tcp
 ```
 
-**10. If the node would like to expose CometBFTs jsonRPC and Cosmos SDK GRPC and REST**
+### 10. If the node would like to expose CometBFTs jsonRPC and Cosmos SDK GRPC and REST
 
 ```console
 sudo ufw allow 26657/tcp &&
@@ -87,13 +87,13 @@ sudo ufw allow 9090/tcp &&
 sudo ufw allow 1317/tcp
 ```
 
-**11. Enable firewall**
+### 11. Enable firewall
 
 ```console
 sudo ufw enable
 ```
 
-**12. Download and unzip Sovereign chain binary**
+### 12. Download and unzip Sovereign chain binary
 
 ```console
 wget https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
@@ -102,7 +102,7 @@ wget https://github.com/sovereign-domains/sovereignchain-release/raw/main/releas
 tar xzf sovereignchain_linux_amd64.tar.gz
 ```
 
-**13. Initialize the application and create app key**
+### 13. Initialize the application and create app key
 
 ```console
 ./sovereignchaind init <moniker> --chain-id sovereignchain
@@ -112,7 +112,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ```
 Store keyring passphrase and mnemonic somewhere safe.
 
-**14a. Copy config files and validate**
+### 14a. Copy config files and validate
 
 ```console
 curl -LJ https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
@@ -130,7 +130,7 @@ curl -LJ https://github.com/sovereign-domains/sovereignchain-release/raw/main/co
 ./sovereignchaind genesis validate-genesis
 ```
 
-**14b. Update config files manually**
+### 14b. Update config files manually
 
 ```console
 ls ~/.sovereignchain/config/
@@ -144,14 +144,14 @@ app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_
 
 Use a file editor like pico or nano to edit app.toml and config.toml
 
-**15. Back up keys**
+### 15. Back up keys
 
 ```console
 ~/.sovereignchain/config/node_key.json
 ~/.sovereignchain/config/priv_validator_key.json
 ```
 
-**16. Install Cosmovisor**
+### 16. Install Cosmovisor
 
 ```console
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
@@ -166,14 +166,14 @@ should return:
 /home/<moniker>/go/bin/cosmovisor
 ```
 
-**17. Copy sovereignchain binary to Cosmovisor folder**
+### 17. Copy sovereignchain binary to Cosmovisor folder
 
 ```console
 mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades &&
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-**18. Set up Cosmovisor service (remember to replace `<moniker>` throughout)**
+### 18. Set up Cosmovisor service (remember to replace `<moniker>` throughout)
 
 ```console
 sudo nano /etc/systemd/system/sovereignchaind.service
@@ -222,7 +222,7 @@ should return:
 ~$ systemd[1]: Started Sovereign Daemon (cosmovisor).
 ```
 
-**19. Monitor logs CTRL +C to exit**
+### 19. Monitor logs CTRL +C to exit
 
 ```console
 journalctl -fu sovereignchaind
