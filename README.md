@@ -4,8 +4,7 @@
 2CPU, 4GB RAM, 50GB storage. N.B. As the network grows, all three requirements will increase.
 
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
-Information inside <> should be replaced with your data. For example, if you are naming your node 'mynode', <moniker> should be replaced with 'mynode'.
-
+Information inside <> should be replaced with your data.
 
 **1. Update the local package list and install any available upgrades**
 
