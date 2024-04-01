@@ -128,7 +128,14 @@ WantedBy=multi-user.target
 sudo -S systemctl daemon-reload
 sudo -S systemctl enable sovereignchaind
 sudo systemctl start sovereignchaind
+sudo systemctl status sovereignchaind
 ```
-
-
+should return:
+```console
+     Loaded: loaded (/etc/systemd/system/sovereignchaind.service; enabled; vendor preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Mon 2024-04-01 08:18:46 UTC; 2s ago
+    Process: 8068 ExecStart=/home/<moniker>/go/bin/cosmovisor run start (code=exited, status=217/USER)
+   Main PID: 8068 (code=exited, status=217/USER)
+        CPU: 2ms
+```
 
