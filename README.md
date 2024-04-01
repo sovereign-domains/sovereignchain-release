@@ -4,7 +4,7 @@
 2CPU, 4GB RAM, 50GB storage. N.B. As the network grows, all three requirements will increase.
 
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
-Information inside <> should be replaced with your data.
+Throughout, replace `<moniker>` with the name of your node.
 
 **1. Update the local package list and install any available upgrades**
 
@@ -171,7 +171,7 @@ mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
-**18. Set up Cosmovisor service (remember to replace moniker throughout)**
+**18. Set up Cosmovisor service (remember to replace `<moniker>` throughout)**
 
 ```console
 sudo nano /etc/systemd/system/sovereignchaind.service
