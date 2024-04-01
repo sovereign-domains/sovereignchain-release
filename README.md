@@ -85,10 +85,11 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ```console
 ./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
-**14. The default config files have been created in ~/.sovereignchain/config/**
+**14. The default config files have been created in ~/.sovereignchain/config/**  
 app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
 
-**15. Back up node_key.json and priv_validator_key.json**
+**15. Back up**  
+node_key.json and priv_validator_key.json
 
 **16. Install Cosmovisor**
 ```console
@@ -100,8 +101,9 @@ should return:
 /home/<moniker>/go/bin/cosmovisor
 ```
 
-**16. Set up service**
+**16. Set up service (remember to replace <moniker> throughout**
 ```console
+mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin && mkdir -p $DAEMON_HOME/cosmovisor/upgrades
 sudo nano /etc/systemd/system/sovereignchaind.service
 ```
 ```console
@@ -132,10 +134,20 @@ sudo systemctl status sovereignchaind
 ```
 should return:
 ```console
+     sovereignchaind.service - Sovereign Daemon (cosmovisor)
      Loaded: loaded (/etc/systemd/system/sovereignchaind.service; enabled; vendor preset: enabled)
-     Active: activating (auto-restart) (Result: exit-code) since Mon 2024-04-01 08:18:46 UTC; 2s ago
-    Process: 8068 ExecStart=/home/<moniker>/go/bin/cosmovisor run start (code=exited, status=217/USER)
-   Main PID: 8068 (code=exited, status=217/USER)
-        CPU: 2ms
+     Active: active (running) since Mon 2024-04-01 08:25:12 UTC; 4ms ago
+   Main PID: 9007 (cosmovisor)
+      Tasks: 1 (limit: 4642)
+     Memory: 384.0K
+        CPU: 1ms
+     CGroup: /system.slice/sovereignchaind.service
+             └─9007 /home/genesis/go/bin/cosmovisor run start
+
+~$ systemd[1]: Started Sovereign Daemon (cosmovisor).
+```
+**17. Monitor logs CTRL +C to exit**
+```console
+journalctl -fu sovereignchaind
 ```
 
