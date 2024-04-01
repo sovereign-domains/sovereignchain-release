@@ -22,7 +22,8 @@ sudo apt-get install make build-essential gcc git jq chrony -y
 
 ```console
 sudo adduser <moniker>
-
+```
+```console
 sudo usermod -aG sudo <moniker>
 ```
 
@@ -35,7 +36,8 @@ exit
 
 ```console
 wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
-
+```
+```console
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
