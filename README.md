@@ -8,7 +8,7 @@ Information inside <> should be replaced with your data. For example, if you are
 
 **Update the local package list and install any available upgrades**  
 ```console
-$ sudo apt-get update && sudo apt upgrade -y
+~$ sudo apt-get update && sudo apt upgrade -y
 ```
 
 **Install toolchain and ensure accurate time synchronization**  
