@@ -41,7 +41,7 @@ wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
-**6. Update profile**
+**6a. Update profile**
 
 ```console
 export GOROOT=/usr/local/go
@@ -54,7 +54,8 @@ export MONIKER_NAME=<moniker>
 export WALLET_NAME=<moniker>
 ```
 
-````console
+**6b. Apply the changes**
+```console
 source ~/.profile
 ```
 
