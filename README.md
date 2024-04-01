@@ -125,8 +125,7 @@ curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/c
 **14b. Update config files manually**
 
 ```console
-cd ~/.sovereignchain/config/
-ls
+ls ~/.sovereignchain/config/
 ```
 
 should result in:
