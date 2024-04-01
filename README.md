@@ -21,7 +21,8 @@ sudo apt-get install make build-essential gcc git jq chrony -y
 **3. Add validator as system user**
 
 ```console
-sudo adduser <moniker> &&
+sudo adduser <moniker>
+
 sudo usermod -aG sudo <moniker>
 ```
 
@@ -33,7 +34,8 @@ exit
 **5. Install Go**
 
 ```console
-wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz &&
+wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
 ```
 
