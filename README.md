@@ -100,14 +100,14 @@ sovereignchaind keys add $WALLET_NAME
 ```
 Store keyring passphrase and mnemonic somewhere safe.
 
-**14a. Copy config files**
+**14a. Copy config files and validate**
 
 ```console
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/genesis.json -o ~/.sovereignchain/config/genesis.json
 chmod a-wx ~/.sovereignchain/config/genesis.json
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/config.toml -o ~/.sovereignchain/config/config.toml
 curl -LJO https://github.com/sovereign-domains/sovereignchain-release/raw/main/config/app.toml -o ~/.sovereignchain/config/app.toml
-
+sovereignchaind validate-genesis
 ```
 
 **14b. Update config files manually**
@@ -125,7 +125,7 @@ app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_
 
 Use a file editor like pico or nano to edit app.toml and config.toml
 
-**15. Back up**
+**15. Back up:**
 
 ```console
 node_key.json and priv_validator_key.json
