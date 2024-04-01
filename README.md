@@ -107,13 +107,7 @@ curl https://github.com/sovereign-domains/sovereignchain-release/blob/main/confi
 curl https://github.com/sovereign-domains/sovereignchain-release/blob/main/config/app.toml -o ~/.sovereignchain/config/app.toml
 ```
 
-should result in:
-
-```console
-app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
-```
-
-**14. Update config files manually**
+**14b. Update config files manually**
 
 ```console
 cd ~/.sovereignchain/config/
