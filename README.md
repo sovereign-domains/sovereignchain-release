@@ -56,7 +56,7 @@ export WALLET_NAME=<moniker>
 
 ````console
 source ~/.profile
-```console
+```
 
 **7. Log out and back in if neccessary**
 **8. Check Go installation**
