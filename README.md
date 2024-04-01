@@ -164,7 +164,7 @@ should return:
 /home/<moniker>/go/bin/cosmovisor
 ```
 
-**17. Establish current binary**
+**17. Copy sovereignchain binary to Cosmovisor folder**
 
 ```console
 cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
