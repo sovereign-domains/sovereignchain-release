@@ -154,7 +154,7 @@ Use a file editor like pico or nano to edit app.toml and config.toml
 **16. Install Cosmovisor**
 
 ```console
-go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest &&
 which cosmovisor
 ```
 
