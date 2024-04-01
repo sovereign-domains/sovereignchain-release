@@ -85,10 +85,21 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ```console
 ./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
-**14. Update config files**  
+
+**14a. Copy config files**  
+```console
+curl https://github.com/sovereign/sovereignchain/blob/main/genesis.json -o ~/.sovereignchain/config/genesis.json
+chmod a-wx ~/.sovereignchain/config/genesis.json
+curl https://github.com/sovereign/sovereignchain/blob/main/genesis.json -o ~/.sovereignchain/config/genesis.json
+```
+should result in:
+```console
+app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
+```
+
+**14. Update config files manually**  
 ```console
 cd ~/.sovereignchain/config/
-ls
 ```
 should result in:
 ```console
