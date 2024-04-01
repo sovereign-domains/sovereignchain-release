@@ -21,7 +21,7 @@ sudo apt-get install make build-essential gcc git jq chrony -y
 **3. Add validator as system user**
 
 ```console
-sudo adduser <moniker>
+sudo adduser <moniker> &&
 sudo usermod -aG sudo <moniker>
 ```
 
