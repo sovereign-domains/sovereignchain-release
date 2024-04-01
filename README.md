@@ -51,7 +51,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export DAEMON_NAME=sovereignchaind
 export DAEMON_HOME=$HOME/.sovereignchain
 export MONIKER_NAME=<moniker>
-export WALLET_NAME=<moniker-wallet>
+export WALLET_NAME=<moniker>
 ```
 
 ````console
