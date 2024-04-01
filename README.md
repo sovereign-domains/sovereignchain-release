@@ -74,10 +74,10 @@ go version go1.22.0 linux/amd64
 
 **9. Set up firewall**
 ```console
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow ssh
-sudo ufw allow 26656/tcp
+sudo ufw default deny incoming &&
+sudo ufw default allow outgoing &&
+sudo ufw allow ssh &&
+sudo ufw allow 26656/tcp &&
 sudo ufw allow 26660/tcp
 ```
 
