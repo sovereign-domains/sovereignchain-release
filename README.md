@@ -144,10 +144,11 @@ app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_
 
 Use a file editor like pico or nano to edit app.toml and config.toml
 
-**15. Back up:**
+**15. Back up keys**
 
 ```console
-node_key.json and priv_validator_key.json
+~/.sovereignchain/config/node_key.json
+~/.sovereignchain/config/priv_validator_key.json
 ```
 
 **16. Install Cosmovisor**
