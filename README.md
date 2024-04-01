@@ -77,8 +77,57 @@ sudo ufw enable
 
 **12. Download and unzip binary**
 ```console
-curl -O https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
+wget https://github.com/sovereign-domains/sovereignchain-release/raw/main/release/sovereignchain_linux_amd64.tar.gz
 tar xzf sovereignchain_linux_amd64.tar.gz
+```
+
+**13. Initialize the application**
+```console
+./sovereignchaind init <moniker> --chain-id sovereignchain
+```
+**14. The default config files have been created in ~/.sovereignchain/config/**
+app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
+
+**15. Back up node_key.json and priv_validator_key.json**
+
+**16. Install Cosmovisor**
+```console
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
+which cosmovisor
+```
+should return:
+```console
+/home/<moniker>/go/bin/cosmovisor
+```
+
+**16. Set up service**
+```console
+sudo nano /etc/systemd/system/sovereignchaind.service
+```
+```console
+[Unit]
+Description=Sovereign Daemon (cosmovisor)
+After=network-online.target
+
+[Service]
+User=<moniker>
+ExecStart=/home/<moniker>/go/bin/cosmovisor run start
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+Environment="DAEMON_NAME=sovereignchaind"
+Environment="DAEMON_HOME=/home/<moniker>/.sovereignchain"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```console
+sudo -S systemctl daemon-reload
+sudo -S systemctl enable sovereignchaind
+sudo systemctl start sovereignchaind
 ```
 
 
