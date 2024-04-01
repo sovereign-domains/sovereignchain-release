@@ -3,18 +3,20 @@
 **Minimum hardware spec:**  
 2CPU, 4GB RAM, 50GB storage. N.B. As the network grows, all three requirements will increase.
 
-**The following instructions apply for Ubuntu 22.04 LTS 64-bit**
-Information inside <> should be replaced with your data. For example, if you are naming your node 'mynode', <moniker> should be replaced with 'mynode'.
+**The following instructions apply for Ubuntu 22.04 LTS 64-bit**  
+Information inside <> should be replaced with your data. For example, if you are naming your node 'mynode', <moniker> should be replaced with 'mynode'.  
 
-**Update the local package list and install any available upgrades**
+**Update the local package list and install any available upgrades**  
+```console
 $ sudo apt-get update && sudo apt upgrade -y
+```
 
-**Install toolchain and ensure accurate time synchronization**
-$ sudo apt-get install make build-essential gcc git jq chrony -y
+**Install toolchain and ensure accurate time synchronization**  
+$ sudo apt-get install make build-essential gcc git jq chrony -y  
 
-**Add validator as system user**
-$ sudo adduser <moniker>
-$ sudo usermod -aG sudo <moniker>
+**Add validator as system user**  
+$ sudo adduser <moniker>  
+$ sudo usermod -aG sudo <moniker>  
 
 **Log out and back in as the new user**
 
