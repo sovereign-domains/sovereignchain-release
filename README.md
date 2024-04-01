@@ -86,7 +86,7 @@ tar xzf sovereignchain_linux_amd64.tar.gz
 ./sovereignchaind init <moniker> --chain-id sovereignchain
 ```
 **14. Update config files**  
-```console```
+```console
 cd ~/.sovereignchain/config/
 ls
 ```
