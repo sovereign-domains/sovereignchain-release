@@ -1,6 +1,6 @@
 # Instructions for becoming a Sovereign validator.
 
-**Minimum hardware spec:**
+**Minimum hardware spec:**  
 2CPU, 4GB RAM, 50GB storage. N.B. As the network grows, all three requirements will increase.
 
 **The following instructions apply for Ubuntu 22.04 LTS 64-bit**
