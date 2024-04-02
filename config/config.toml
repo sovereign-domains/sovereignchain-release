@@ -19,7 +19,7 @@ version = "0.38.5"
 proxy_app = "tcp://127.0.0.1:26658"
 
 # A custom human readable name for this node
-moniker = "mynode"
+moniker = "genesis"
 
 # Database backend: goleveldb | cleveldb | boltdb | rocksdb | badgerdb
 # * goleveldb (github.com/syndtr/goleveldb - most popular implementation)
@@ -46,7 +46,7 @@ db_backend = "goleveldb"
 db_dir = "data"
 
 # Output level for logging, including package level options
-log_level = "info"
+log_level = "error"
 
 # Output format: 'plain' (colored text) or 'json'
 log_format = "plain"
