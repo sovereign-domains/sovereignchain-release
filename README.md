@@ -66,7 +66,7 @@ source ~/.profile
 go version
 ````
 should return something like this:
-```console
+```
 go version go1.22.0 linux/amd64
 ```
 
