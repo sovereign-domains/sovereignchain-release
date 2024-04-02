@@ -65,7 +65,6 @@ source ~/.profile
 ```console
 go version
 ````
-should return something like this:
 ```
 go version go1.22.0 linux/amd64
 ```
@@ -163,8 +162,6 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 ```console
 which cosmovisor
 ```
-
-should return:
 
 ```console
 /home/<moniker>/go/bin/cosmovisor
