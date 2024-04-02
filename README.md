@@ -221,7 +221,16 @@ sudo systemctl status sovereignchaind
 ~$ systemd[1]: Started Sovereign Daemon (cosmovisor).
 ```
 
-### 19. Monitor logs CTRL +C to exit
+### 19. Check status
+
+```console
+./sovereignchaind status
+```
+```
+{"node_info":{"protocol_version":{"p2p":"8","block":"11","app":"0"},"id":"f5ae61f6a8e0569c1d75beb7711efa89c7d32c66","listen_addr":"tcp://0.0.0.0:26656","network":"sovereignchain","version":"0.38.5","channels":"40202122233038606100","moniker":"genesis","other":{"tx_index":"on","rpc_address":"tcp://0.0.0.0:26657"}},"sync_info":{"latest_block_hash":"35F36E10CCA14A6E785F1693C25B85265F5A5461D17C52EA5787D3314514C042","latest_app_hash":"539662503C543FB02DD25EC53A00309BC71475C8ACD0B28D9E96D0385019DEC8","latest_block_height":"10981","latest_block_time":"2024-04-02T16:52:04.157878138Z","earliest_block_hash":"44EB8259843BDA9FD40A7F6783C4DCFD703C1A065397D2E718420778E1A87543","earliest_app_hash":"E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855","earliest_block_height":"1","earliest_block_time":"2024-04-02T13:40:30.78060932Z","catching_up":false},"validator_info":{"address":"C1E3A5A1269EA4FAE654D6F624A51290C35E5890","pub_key":{"type":"tendermint/PubKeyEd25519","value":"MMjU0LekWnovFrdGJly7JcW1/xhSiwGIaqXWQESiGyE="},"voting_power":"0"}}
+```
+
+### 20. Monitor logs (CTRL+C to exit)
 
 ```console
 journalctl -fu sovereignchaind
