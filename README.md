@@ -136,13 +136,17 @@ curl -LJ https://github.com/sovereign-domains/sovereignchain-release/raw/main/co
 ls ~/.sovereignchain/config/
 ```
 
-should result in:
-
-```console
+```
 app.toml  client.toml  config.toml  genesis.json  node_key.json  priv_validator_key.json
 ```
 
-Use a file editor like pico or nano to edit app.toml and config.toml
+```console
+pico ~/.sovereignchain/config/app.toml
+```
+
+```console
+pico ~/.sovereignchain/config/config.toml
+```
 
 ### 15. Back up keys
 
