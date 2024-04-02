@@ -207,9 +207,7 @@ sudo systemctl start sovereignchaind &&
 sudo systemctl status sovereignchaind
 ```
 
-should return:
-
-```console
+```
      sovereignchaind.service - Sovereign Daemon (cosmovisor)
      Loaded: loaded (/etc/systemd/system/sovereignchaind.service; enabled; vendor preset: enabled)
      Active: active (running) since Mon 2024-04-01 08:51:22 UTC; 23ms ago
