@@ -163,7 +163,7 @@ go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 which cosmovisor
 ```
 
-```console
+```
 /home/<moniker>/go/bin/cosmovisor
 ```
 
