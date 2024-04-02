@@ -47,7 +47,7 @@ pico ~/.profile
 ```
 
 
-```console
+```
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
@@ -179,7 +179,7 @@ cp $HOME/sovereignchaind $DAEMON_HOME/cosmovisor/genesis/bin
 sudo nano /etc/systemd/system/sovereignchaind.service
 ```
 
-```console
+```
 [Unit]
 Description=Sovereign Daemon (cosmovisor)
 After=network-online.target
